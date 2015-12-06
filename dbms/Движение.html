@@ -1,0 +1,61 @@
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+ <style> 
+#Superman { 
+position: relative; 
+cursor: pointer; 
+} 
+#Green { 
+position:relative; 
+cursor: pointer; 
+} 
+#IronMan { 
+position: relative; 
+cursor: pointer; 
+} 
+</style>
+</head> 
+<body> 
+<img id="Superman" src="http://stickerboom.ru/files/2013/02/27/934xb0fb-300x220.png" height="300" width="300"> 
+<img id="Green" src="http://shayera-hol.ucoz.net/1243964947_73.jpg" height="300" width="300"> 
+<img id="IronMan" src="http://st.akihabarashop.ru/6/1202/114/SJPA_Iron_Man_1.png" height="300" width="300"> 
+<script> 
+Superman.onclick = function() { 
+var start = Date.now(); 
+var timer = setInterval(function() { 
+var timePassed = Date.now() - start; 
+Superman.style.top = timePassed / 5 + 'px'; 
+Green.style.right = timePassed / 10 + 'px'; 
+Green.style.top = timePassed / 10 + 'px'; 
+IronMan.style.left = timePassed / 5 + 'px'; 
+if (timePassed > 2000) clearInterval(timer); 
+}, 30); 
+} 
+Green.onclick = function() { 
+var start = Date.now(); 
+var timer = setInterval(function() { 
+var timePassed = Date.now() - start; 
+Superman.style.right = timePassed / 5 + 'px'; 
+Superman.style.top = timePassed / 5 + 'px'; 
+Green.style.left = timePassed / 10 + 'px'; 
+Green.style.bottom = timePassed / 10 + 'px'; 
+IronMan.style.right = timePassed / 5 + 'px'; 
+IronMan.style.top = timePassed / 'px' -5; 
+if (timePassed > 2000) clearInterval(timer); 
+}, 30); 
+} 
+IronMan.onclick = function() { 
+var start = Date.now(); 
+var timer = setInterval(function() { 
+var timePassed = Date.now() - start; 
+Superman.style.left = timePassed / 5 + 'px'; 
+Green.style.right = timePassed / 10 + 'px'; 
+Green.style.top = timePassed / 10 + 'px'; 
+IronMan.style.top = timePassed / 5 + 'px';  
+if (timePassed > 2000) clearInterval(timer); 
+}, 30); 
+} 
+</script> 
+</body> 
+</html>
