@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript">
+ 
+        jQuery(function( $ ){
+            var  div=$( "div" );
+            div.css({
+                position: "fixed",
+                right: "1000px"
+               
+            });
+            div.animate({
+                    right: 500
+                },
+                {
+                    duration: 6000,
+                    step: function( st )
+                    {
+                        $(this).css({
+                            top:Math.sin(st/40)*110+125 // 1,2 - амплитуда, 3 - расстояние от начала x
+                        })
+                    }
+                }
+            );
+        });
+</script>
+</head>
+<body>
+    <div><img src="http://s54.radikal.ru/i146/0902/23/50adce3f5d64.png" width="50" height="50"></div>
+    <div2><img src="http://900igr.net/data/tsvet-i-forma/Figury-5.files/0011-022-Sinusoida.png" width="500" height="300"></div2>
+</body>
+</html>
